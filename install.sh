@@ -5,6 +5,7 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 ######################
 
+#
 #pre-reqs
 #########################
 sudo apt-get -y install git
@@ -20,13 +21,10 @@ sudo apt-get -y install python-celery-common
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password 123mudar'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 123mudar'
 sudo apt-get -y install mysql-server
-sudo mysql -u root -p123mudar -e "CREATE DATABASE vmware;"
-sudo mysql -u root -p123mudar -e "CREATE USER 'vmware'@'localhost' IDENTIFIED BY 'IBM_2016';"
-sudo mysql -u root -p123mudar -e "GRANT ALL PRIVILEGES ON vmware.* TO 'vmware'@'localhost';"
-sudo mysql -u vmware -pIBM_2016 -e "SOURCE /root/VMware-automation-v2/vmware_schema_db.sql;" vmware
 
 #clone
 git clone git@github.ibm.com:jmbarros/vmware-production-bmx.git
+
 
 #python
 sudo pip install -r /root/vmware-production-bmx/esxi/requirements.txt
