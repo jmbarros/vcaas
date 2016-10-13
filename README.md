@@ -8,7 +8,7 @@ In order to have your environment automatically set, please execute the followin
   It will download the required scripts that shall be executed in the next steps.
 - Run create_key.ssh the following way:
   ./create_key.sh
-  Copy the generated ssh key to the following github account: https://github.ibm.com/jmbarros/vmware-production-bmx. [ADICIONAR DETALHES DE COMO FAZER ISSO]
+  Copy the generated ssh key to the following github account: https://github.ibm.com/jmbarros/vmware-production-bmx. [ADD DETAILS ON HOW TO DO THIS]
 - Run install.sh the following way:
   ./install.sh
 - Execute start.sh the following way:
